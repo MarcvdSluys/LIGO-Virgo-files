@@ -1,0 +1,6 @@
+scheduler: condor
+requirements:
+  - 'has_avx2'
+  - '(CpuFamily =?= 23)'
+directives:
+  environment: '"LAL_DATA_PATH=/cvmfs/oasis.opensciencegrid.org/ligo/sw/pycbc/lalsuite-extra/current/share/lalsimulation"'
