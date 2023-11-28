@@ -8,7 +8,7 @@ executable = check-gpu.py
 request_memory = 10G
 request_disk = 10G
 request_gpus = 1
-# request_cpus = 1
+# request_cpus = 1  # "Officially" needed, but they're usually around anyhow...
 requirements = (GPUs_Capability > 7.5)
 
 output = output.txt
@@ -20,7 +20,8 @@ notification = never
 accounting_group = ligo.dev.o4.cbc.explore.test
 accounting_group_user = albert.einstein
 
-# MY.UNDESIRED_Sites = "LIGO-CIT,LIGO-LA"
-MY.DESIRED_Sites = "SURFsara"
+requirements = IS_GLIDEIN                   # Force IGWN, not any the local HTCondor cluster
+# MY.UNDESIRED_Sites = "LIGO-CIT,LIGO-LA"   # Avoid specific IGWN sites
+MY.DESIRED_Sites = "SURFsara"               # Specify a specific IGWN site
 
 queue 1
