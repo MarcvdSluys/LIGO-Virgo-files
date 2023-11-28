@@ -1,0 +1,26 @@
+universe = vanilla
+
+executable = check-gpu.py
+# arguments = 
+
++SingularityImage = "docker://pytorch/pytorch"
+
+request_memory = 10G
+request_disk = 10G
+request_gpus = 1
+# request_cpus = 1
+requirements = (GPUs_Capability > 7.5)
+
+output = output.txt
+error  = error.txt
+log    = log.txt
+
+notification = never
+
+accounting_group = ligo.dev.o4.cbc.explore.test
+accounting_group_user = albert.einstein
+
+# MY.UNDESIRED_Sites = "LIGO-CIT,LIGO-LA"
+MY.DESIRED_Sites = "SURFsara"
+
+queue 1
