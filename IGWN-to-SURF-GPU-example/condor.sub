@@ -20,8 +20,13 @@ notification = never
 accounting_group = ligo.dev.o4.cbc.explore.test
 accounting_group_user = albert.einstein
 
-requirements = IS_GLIDEIN                   # Force IGWN, not any the local HTCondor cluster
-# MY.UNDESIRED_Sites = "LIGO-CIT,LIGO-LA"   # Avoid specific IGWN sites
-MY.DESIRED_Sites = "SURFsara"               # Specify a specific IGWN site
+# Force IGWN, not any the local HTCondor cluster:
+requirements = IS_GLIDEIN
+
+# Avoid specific IGWN sites:
+# MY.UNDESIRED_Sites = "LIGO-CIT,LIGO-LA"
+
+# Specify a specific IGWN site:
+MY.DESIRED_Sites = "SURFsara"
 
 queue 1
