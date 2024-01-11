@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+echo "Hello"
+source /venv/bin/activate
+python test.py
