@@ -100,6 +100,9 @@ with the dots being the base image used in building the image.
 ```bash
 docker build --no-cache -t <image_name> .
 ```
-
-
+- If you receive an error such as "Cannot write: No space left on device", run 
+```bash
+docker system prune -a
+```
+to remove all unused containers, networks, images (both dangling and unreferenced), and optionally, volumes. This will free up space on your machine.
 
