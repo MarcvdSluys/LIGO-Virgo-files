@@ -36,8 +36,8 @@ dependencies:
       - idna==3.6
       - igwn-auth-utils==1.1.0
       - importlib-resources==6.1.1
-      - jax==0.4.21
-      - jaxlib==0.4.21
+      - jax==0.4.23
+      - jaxlib==0.4.23
       - jaxtyping==0.2.24
       - git+https://github.com/ThibeauWouters/jim.git@new-mass-matrix-tuning
       - kiwisolver==1.4.5
