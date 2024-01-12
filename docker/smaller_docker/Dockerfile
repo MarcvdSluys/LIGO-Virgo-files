@@ -16,7 +16,7 @@ RUN conda env create -f environment.yml && \
     conda clean --all --yes && \
     source activate jim && \
     pip install --upgrade "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html && \
-    # pip install --force-reinstall -v "jax==0.4.23" && \
+    # pip install --force-reinstall -v "jax==0.4.21" && \
     conda install -c conda-forge conda-pack && \
     conda-pack -n jim -o /tmp/env.tar && \
     mkdir /venv && cd /venv && tar xf /tmp/env.tar && \
@@ -30,3 +30,4 @@ FROM --platform=linux/amd64 debian:buster AS runtime
 
 # Copy /venv from the previous stage:
 COPY --from=build /venv /venv
+# SHELL ["/bin/bash", "-c"]
